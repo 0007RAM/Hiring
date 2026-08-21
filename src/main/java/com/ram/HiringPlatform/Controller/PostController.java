@@ -32,4 +32,8 @@ public class PostController {
     public List<Post> getAll(@PathVariable String text){
         return srepo.searchFindByText(text);
     }
+    @GetMapping("/isEmpty")
+    public boolean isEmpty(){
+        return repo.isEmpty();
+    }
 }
